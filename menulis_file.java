@@ -18,8 +18,6 @@ public class menulis_file {
             }
             out.close();
             p.close();
-            // System.out.println(data[0]);
-            // System.out.println(data[0].substring(1, 3));
         } catch (Exception e) {
             System.err.println("Kesalahan : " + e.getMessage());;
         };

@@ -1,6 +1,5 @@
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.lang.Math;
 
 public class membaca_file {
     public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class membaca_file {
                 uts = Integer.parseInt(x.substring(6, 8));
                 uas = Integer.parseInt(x.substring(9, 11));
                 total = tugas + uts + uas;
-                na = Math.abs(total/3);
+                na = (0.2 * tugas + 0.3 * uts + 0.5 * uas);
                 h += na;
                 System.out.print(i + "\t" + tugas + "\t" + uts + "\t" + uas + "\t" + na);
                 System.out.println();
