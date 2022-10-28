@@ -25,18 +25,37 @@ begin
     readln(jumlah_pesan);
     for i := 1 to jumlah_pesan do begin
         writeln('Masukan data ke ', i);
-        write('Nama Makanan : ');
-        readln(data_makanan[i].nama_makanan);
-        write('Banyaknya : ');
-        readln(data_makanan[i].banyak);
-        write('Harga : ');
-        readln(data_makanan[i].harga);
-        data_makanan[i].jumlah := data_makanan[i].banyak * data_makanan[i].harga;
-        total_harga += data_makanan[i].jumlah; // Menambah total harga setiap looping
+        with data_makanan[i] do begin
+            write('Nama Makanan : ');
+            readln(nama_makanan);
+            write('Banyaknya : ');
+            readln(banyak);
+            write('Harga : ');
+            readln(harga);
+            jumlah := banyak * harga;
+            total_harga += jumlah;
+        end;
         writeln;
+        // writeln('Masukan data ke ', i);
+        // write('Nama Makanan : ');
+        // readln(data_makanan[i].nama_makanan);
+        // write('Banyaknya : ');
+        // readln(data_makanan[i].banyak);
+        // write('Harga : ');
+        // readln(data_makanan[i].harga);
+        // data_makanan[i].jumlah := data_makanan[i].banyak * data_makanan[i].harga;
+        // total_harga += data_makanan[i].jumlah; // Menambah total harga setiap looping
+        // writeln;
     end;
-    write('Masukkan uang anda : ');
-    readln(jumlah_uang);
+    while (true) do begin
+        write('Masukkan uang anda : ');
+        readln(jumlah_uang);
+        if (jumlah_uang < total_harga) then begin
+            writeln('Jumlah uang anda kurang, total harga Rp. ', total_harga);
+            continue;
+        end;
+        break;
+    end;
     clrscr;
     gotoxy(19, 1); writeln('Warung Makan 89');
     gotoxy(16, 2); writeln('JL. Siliwangi 1, no 113');
