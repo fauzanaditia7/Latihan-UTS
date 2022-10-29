@@ -28,12 +28,6 @@ begin
             write('Masukkan alamat : ');
             readln(alamat);
         end;
-        // write('Masukkan nama : ');
-        // readln(data_siswa[i].nama);
-        // write('Masukkan umur : ');
-        // readln(data_siswa[i].umur);
-        // write('Masukkan alamat : ');
-        // readln(data_siswa[i].alamat);
         writeln;
     end;
     clrscr;
@@ -45,9 +39,6 @@ begin
             writeln('Umur   : ', umur);
             writeln('Alamat : ', alamat);
         end;
-        // writeln('Nama   : ', data_siswa[i].nama);
-        // writeln('Umur   : ', data_siswa[i].umur);
-        // writeln('Alamat : ', data_siswa[i].alamat);
         writeln;
     end;
     writeln('=================================================');
